@@ -1,0 +1,206 @@
+{
+    "en": {
+        "nav": {
+            "principles": "Principles",
+            "diagnostic": "How We Work",
+            "engagement": "Engagement",
+            "cases": "Selected Work",
+            "contact": "Contact"
+        },
+        "hero": {
+            "h1": "We stabilize complex operations for executive teams so they can decide faster, with confidence.",
+            "subline": "OPERATIONAL DIAGNOSTICS & GOVERNANCE FOR HIGH-STAKES DECISION ENVIRONMENTS",
+            "benefits": [
+                "Reduce operational risk",
+                "Align leadership and execution",
+                "Restore clarity in complex environments"
+            ],
+            "supporting": "When misalignment is costing you time, trust, and strategic momentum — we step in.",
+            "cta": "Request a Diagnostic Call"
+        },
+        "principles": {
+            "title": "Principles",
+            "items": [
+                {
+                    "title": "Loyalty",
+                    "body": "We protect long-term operational stability over short-term pressure.\nWe do not optimize for speed at the expense of governance."
+                },
+                {
+                    "title": "Simplicity",
+                    "body": "We reduce complexity before introducing solutions.\nWe reject interventions that cannot be clearly governed."
+                }
+            ]
+        },
+        "diagnostic": {
+            "title": "The Diagnostic",
+            "usage": "Used when operations are misaligned, ownership is unclear, or decisions are stalled.",
+            "received": "Leaders receive clarity — not solutions.\nThis is a single, expert-level consultation, informed by written context provided in advance.",
+            "preparation_title": "Preparation Requirement",
+            "preparation_body": "The Diagnostic assumes the situation is already documented.\nClients are expected to describe their context, constraints, and points of friction in advance — much like a patient preparing before a medical consultation.",
+            "subsection_title": "What the Diagnostic Produces",
+            "outcomes": [
+                "Explicit articulation of operational risk",
+                "Shared decision framework",
+                "Clear trade-offs",
+                "Go / no-go boundaries for change"
+            ],
+            "outcome_disclaimer": "The output is clarity, not a plan.",
+            "exclusion": "No tools. No dashboards. No systems. No execution."
+        },
+        "engagement_model": {
+            "title": "Engagement Model",
+            "model_items": [
+                {
+                    "title": "Diagnostic",
+                    "body": "Fixed-scope, finite, clarity-producing engagement."
+                },
+                {
+                    "title": "Transition Stewardship",
+                    "body": "Retainer-based governance support during periods of change.\nFocuses on decision integrity, accountability, and alignment."
+                }
+            ],
+            "explicit_statement": "Consiglieri does not implement, manage teams, or deliver execution.",
+            "not_fit_title": "When Consiglieri Is Not a Fit",
+            "not_fit_items": [
+                "Execution is the primary need",
+                "The solution is already decided",
+                "The engagement is vendor or software selection",
+                "The cost of misalignment is low"
+            ]
+        },
+        "cases": {
+            "title": "Selected Engagements",
+            "items": [
+                {
+                    "title": "Municipal infrastructure program",
+                    "body": "Restored governance across four departments."
+                },
+                {
+                    "title": "Industrial operation",
+                    "body": "Stabilized decision-making across maintenance, quality, and safety."
+                },
+                {
+                    "title": "Public-private transition",
+                    "body": "Clarified accountability during leadership change."
+                }
+            ]
+        },
+        "contact": {
+            "header": "Contact",
+            "disclaimer": "Engagements begin with a diagnostic conversation to assess fit.",
+            "form": {
+                "name": "Name",
+                "email": "Work Email",
+                "message": "Message (Optional)",
+                "submit": "Request Conversation"
+            }
+        },
+        "footer": {
+            "boundary_title": "Engagement Boundary",
+            "boundary_body": "Consiglieri does not implement systems, manage teams, or own delivery.\nIts role is to preserve clarity, alignment, and governance in complex operational environments.",
+            "rights": "© 2024 Consiglieri. Operational Architecture."
+        }
+    },
+    "pt": {
+        "nav": {
+            "principles": "Princípios",
+            "diagnostic": "Como Trabalhamos",
+            "engagement": "Engajamento",
+            "cases": "Trabalhos Selecionados",
+            "contact": "Contato"
+        },
+        "hero": {
+            "h1": "Nós estabilizamos operações complexas para times executivos decidirem com rapidez e confiança.",
+            "subline": "DIAGNÓSTICO OPERACIONAL E GOVERNANÇA PARA AMBIENTES DE ALTA DECISÃO",
+            "benefits": [
+                "Reduzir risco operacional",
+                "Alinhar liderança e execução",
+                "Restaurar clareza em ambientes complexos"
+            ],
+            "supporting": "Quando o desalinhamento custa tempo, confiança e momento estratégico — nós entramos.",
+            "cta": "Solicitar Diagnóstico"
+        },
+        "principles": {
+            "title": "Princípios",
+            "items": [
+                {
+                    "title": "Lealdade",
+                    "body": "Protegemos a estabilidade operacional de longo prazo sobre a pressão de curto prazo.\nNão otimizamos para velocidade às custas da governança."
+                },
+                {
+                    "title": "Simplicidade",
+                    "body": "Reduzimos a complexidade antes de introduzir soluções.\nRejeitamos intervenções que não possam ser claramente governadas."
+                }
+            ]
+        },
+        "diagnostic": {
+            "title": "O Diagnóstico",
+            "usage": "Usado quando operações estão desalinhadas, a propriedade não é clara ou decisões estão travadas.",
+            "received": "Líderes recebem clareza — não soluções.\nEsta é uma consulta única, de nível especialista, informada por contexto escrito fornecido antecipadamente.",
+            "preparation_title": "Requisito de Preparação",
+            "preparation_body": "O Diagnóstico assume que a situação já está documentada.\nEspera-se que os clientes descrevam seu contexto, restrições e pontos de atrito com antecedência — muito parecido com um paciente se preparando antes de uma consulta médica.",
+            "subsection_title": "O Que o Diagnóstico Produz",
+            "outcomes": [
+                "Articulação explícita de risco operacional",
+                "Estrutura de decisão compartilhada",
+                "Compromissos (trade-offs) claros",
+                "Fronteiras de Go / No-Go para mudança"
+            ],
+            "outcome_disclaimer": "O resultado é clareza, não um plano.",
+            "exclusion": "Sem ferramentas. Sem dashboards. Sem sistemas. Sem execução."
+        },
+        "engagement_model": {
+            "title": "Modelo de Engajamento",
+            "model_items": [
+                {
+                    "title": "Diagnóstico",
+                    "body": "Engajamento de escopo fixo, finito e produtor de clareza."
+                },
+                {
+                    "title": "Stewardship de Transição",
+                    "body": "Suporte de governança baseado em retainer durante períodos de mudança.\nFoca na integridade da decisão, responsabilidade e alinhamento."
+                }
+            ],
+            "explicit_statement": "A Consiglieri não implementa, não gerencia equipes e não entrega execução.",
+            "not_fit_title": "Quando a Consiglieri Não é Adequada",
+            "not_fit_items": [
+                "Execução é a necessidade primária",
+                "A solução já está decidida",
+                "O engajamento é selação de software ou fornecedor",
+                "O custo do desalinhamento é baixo"
+            ]
+        },
+        "cases": {
+            "title": "Engajamentos Selecionados",
+            "items": [
+                {
+                    "title": "Programa de infraestrutura municipal",
+                    "body": "Governança restaurada em quatro departamentos."
+                },
+                {
+                    "title": "Operação industrial",
+                    "body": "Tomada de decisão estabilizada em manutenção, qualidade e segurança."
+                },
+                {
+                    "title": "Transição público-privada",
+                    "body": "Responsabilidade clarificada durante mudança de liderança."
+                }
+            ]
+        },
+        "contact": {
+            "header": "Contato",
+            "disclaimer": "Engajamentos começam com uma conversa de diagnóstico para avaliar o fit.",
+            "form": {
+                "name": "Nome",
+                "email": "Email Corporativo",
+                "message": "Mensagem (Opcional)",
+                "submit": "Solicitar Conversa"
+            }
+        },
+        "footer": {
+            "boundary_title": "Fronteira de Engajamento",
+            "boundary_body": "A Consiglieri não implementa sistemas, não gerencia equipes e não possui a entrega.\nSeu papel é preservar a clareza, alinhamento e governança em ambientes operacionais complexos.",
+            "rights": "© 2024 Consiglieri. Operational Architecture."
+        }
+    }
+}
