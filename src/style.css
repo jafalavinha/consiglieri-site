@@ -492,8 +492,15 @@ nav {
   nav {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    /* Vertically align Logo and PT button */
     width: 100%;
     position: relative;
+  }
+
+  .nav-logo {
+    height: 60px;
+    /* Smaller logo for mobile header */
   }
 
   .nav-controls {
@@ -503,8 +510,8 @@ nav {
   /* Fix Hero Overlap */
   #hero {
     min-height: auto;
-    padding-top: 100px;
-    /* Space for fixed header */
+    padding-top: 150px;
+    /* Increased space to prevent overlap */
   }
 
   .hero-content {
