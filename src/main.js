@@ -9,6 +9,7 @@ const langSwitchBtn = document.getElementById('lang-switch');
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('Consiglieri loaded - Auto-deploy active');
   updateContent();
   setupObserver();
   setupTriage();
