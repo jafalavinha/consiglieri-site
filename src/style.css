@@ -488,9 +488,13 @@ nav {
 
   nav {
     flex-direction: row;
-    /* Keep logo and burger side by side */
     justify-content: space-between;
     width: 100%;
+    position: relative;
+  }
+
+  .nav-controls {
+    gap: 1rem;
   }
 
   /* Fix Hero Overlap */
