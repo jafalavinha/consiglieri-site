@@ -419,27 +419,97 @@ nav {
   color: var(--text-mute);
 }
 
+/* Mobile Navigation */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 0;
+}
+
+.hamburger span {
+  width: 2rem;
+  height: 0.15rem;
+  background: var(--text-color);
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
+
+  /* Fix Navigation */
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.98);
+    border-bottom: 1px solid var(--border-color);
+    padding: 2rem;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-links.nav-active {
+    display: flex;
+  }
 
   .grid-3-col,
   .grid-2-col,
   .diagnostic-grid,
   nav,
-  .nav-links,
   .hero-container {
     grid-template-columns: 1fr;
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .nav-links {
-    margin-top: 1rem;
-    align-items: flex-start;
-    gap: 1rem;
+  nav {
+    flex-direction: row;
+    /* Keep logo and burger side by side */
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  /* Fix Hero Overlap */
+  #hero {
+    min-height: auto;
+    padding-top: 100px;
+    /* Space for fixed header */
+  }
+
+  .hero-content {
+    margin-bottom: 3rem;
   }
 
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+  }
+
+  .hero-logo {
+    max-height: 40vh;
+    /* Reduce logo size on mobile */
   }
 }
