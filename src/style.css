@@ -419,6 +419,13 @@ nav {
   color: var(--text-mute);
 }
 
+/* Navigation Controls */
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 /* Mobile Navigation */
 .hamburger {
   display: none;
