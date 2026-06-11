@@ -37,7 +37,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           {/* Logo */}
           <a href="#" className="flex items-center gap-3">
             <Image
-              src="/logo-new.png"
+              src="/logo-v3.png"
               alt="Consiglieri Solutions Logo"
               width={180}
               height={55}

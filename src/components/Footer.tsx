@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
         {/* Logo */}
         <div className="mb-6">
           <Image
-            src="/logo-new.png"
+            src="/logo-v3.png"
             alt="Consiglieri Solutions Logo"
             width={150}
             height={45}
