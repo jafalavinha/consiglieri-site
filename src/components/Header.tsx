@@ -39,9 +39,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
             <Image
               src="/logo-v4.png"
               alt="Consiglieri Solutions Logo"
-              width={180}
-              height={55}
-              className="h-10 w-auto sm:h-12 object-contain"
+              width={324}
+              height={99}
+              className="h-[72px] w-auto sm:h-[86px] object-contain"
               priority
             />
           </a>
