@@ -65,7 +65,7 @@ export default function Home() {
                   <div className="space-y-4">
                     <div className="relative h-48 sm:h-60 rounded-xl overflow-hidden border border-brand-blue shadow-md group">
                       <Image
-                        src="/watermarked_img_13730537141133749028.png"
+                        src="/dispatcher.png"
                         alt="Home Services Operational Office"
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -73,29 +73,41 @@ export default function Home() {
                       <div className="absolute inset-0 bg-brand-blue/30 mix-blend-multiply" />
                     </div>
                     <div className="relative h-36 sm:h-44 rounded-xl overflow-hidden border border-brand-blue shadow-md group">
-                      <div className="absolute inset-0 bg-gradient-to-tr from-brand-blue to-brand-bg opacity-80" />
-                      <div className="absolute inset-0 flex flex-col justify-end p-4">
+                      <Image
+                        src="/hvac_technician.png"
+                        alt="HVAC & Plumbing Active Dispatch"
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-brand-blue to-transparent opacity-90" />
+                      <div className="absolute inset-0 flex flex-col justify-end p-4 z-10">
                         <span className="text-brand-orange font-bold text-lg sm:text-xl">HVAC & Plumbing</span>
-                        <span className="text-xs text-brand-text-mute uppercase tracking-widest">Active Dispatch</span>
+                        <span className="text-xs text-brand-text uppercase tracking-widest font-semibold">Active Dispatch</span>
                       </div>
                     </div>
                   </div>
                   <div className="space-y-4 pt-8">
                     <div className="relative h-36 sm:h-44 rounded-xl overflow-hidden border border-brand-blue shadow-md group">
-                      <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/10 to-brand-blue opacity-90" />
-                      <div className="absolute inset-0 flex flex-col justify-end p-4">
+                      <Image
+                        src="/electrician.png"
+                        alt="Roofing & Electrical Operation Review"
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-brand-blue to-transparent opacity-90" />
+                      <div className="absolute inset-0 flex flex-col justify-end p-4 z-10">
                         <span className="text-brand-text font-bold text-lg sm:text-xl">Roofing & Electrical</span>
-                        <span className="text-xs text-brand-text-mute uppercase tracking-widest">Operation Review</span>
+                        <span className="text-xs text-brand-orange uppercase tracking-widest font-semibold">Operation Review</span>
                       </div>
                     </div>
                     <div className="relative h-48 sm:h-60 rounded-xl overflow-hidden border border-brand-blue shadow-md group">
                       <Image
-                        src="/chatgpt_image_09_42_29.png"
+                        src="/roofing.png"
                         alt="Service Technician dispatch"
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-brand-blue/40 mix-blend-multiply" />
+                      <div className="absolute inset-0 bg-brand-blue/30 mix-blend-multiply" />
                     </div>
                   </div>
                 </div>
