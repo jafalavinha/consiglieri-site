@@ -1,12 +1,9 @@
 'use client';
 
 import React from 'react';
-import { useLanguage } from '@/context/LanguageContext';
 import Image from 'next/image';
 
 export const Footer: React.FC = () => {
-  const { t } = useLanguage();
-
   return (
     <footer className="bg-brand-bg border-t border-brand-blue/50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">

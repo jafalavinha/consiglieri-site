@@ -3,15 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useLanguage } from '@/context/LanguageContext';
 import { setLanguagePreference } from '@/utils/language';
 
-interface HeaderProps {
+interface HeaderPtProps {
   onOpenContact: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
-  const { t } = useLanguage();
+export const HeaderPt: React.FC<HeaderPtProps> = ({ onOpenContact }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -26,8 +24,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSelectPt = () => {
-    setLanguagePreference('pt');
+  const handleSelectEnglish = () => {
+    setLanguagePreference('en');
   };
 
   return (
@@ -41,7 +39,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
           {/* Logo with responsive sizing - prevents overlap on mobile */}
-          <Link href="/en" className="flex items-center flex-shrink-0">
+          <Link href="/pt-br" className="flex items-center flex-shrink-0">
             <Image
               src="/logo-v4.png"
               alt="Consiglieri Solutions Logo"
@@ -53,40 +51,56 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#how-we-help" className="text-sm font-medium text-brand-text-mute hover:text-brand-orange transition-colors">
-              {t.nav.howWeHelp}
+          <nav className="hidden md:flex items-center gap-7">
+            <a
+              href="#engenharia-tecnica"
+              className="text-sm font-medium text-brand-text-mute hover:text-brand-orange transition-colors"
+            >
+              Engenharia Técnica
             </a>
-            <a href="#operational-leaks" className="text-sm font-medium text-brand-text-mute hover:text-brand-orange transition-colors">
-              {t.nav.problem}
+            <a
+              href="#engenharia-operacional"
+              className="text-sm font-medium text-brand-text-mute hover:text-brand-orange transition-colors"
+            >
+              Engenharia Operacional
             </a>
-            <a href="#the-funnel" className="text-sm font-medium text-brand-text-mute hover:text-brand-orange transition-colors">
-              {t.nav.funnel}
+            <a
+              href="#como-atuamos"
+              className="text-sm font-medium text-brand-text-mute hover:text-brand-orange transition-colors"
+            >
+              Como Atuamos
             </a>
-            <a href="#results" className="text-sm font-medium text-brand-text-mute hover:text-brand-orange transition-colors">
-              {t.nav.benefits}
+            <a
+              href="#sobre"
+              className="text-sm font-medium text-brand-text-mute hover:text-brand-orange transition-colors"
+            >
+              Sobre
             </a>
-            <a href="#faq" className="text-sm font-medium text-brand-text-mute hover:text-brand-orange transition-colors">
-              {t.nav.faq}
+            <a
+              href="#contato"
+              className="text-sm font-medium text-brand-text-mute hover:text-brand-orange transition-colors"
+            >
+              Contato
             </a>
           </nav>
 
           {/* Actions (Language Switch + Desktop CTA) */}
           <div className="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+            {/* Real Link Language Switcher per PRD Section 10 */}
             <Link
-              href="/pt-br"
-              onClick={handleSelectPt}
+              href="/en"
+              onClick={handleSelectEnglish}
               className="px-2.5 py-1 text-xs sm:text-sm font-semibold tracking-wider text-brand-text-mute hover:text-brand-orange border border-brand-text-mute/30 rounded-md transition-all uppercase flex-shrink-0"
-              title="Mudar para Português"
+              title="Switch to English"
             >
-              PT-BR
+              EN
             </Link>
-            
+
             <button
               onClick={onOpenContact}
               className="hidden md:inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-brand-orange hover:bg-brand-orange/90 rounded-md shadow-md hover:shadow-lg transition-all"
             >
-              {t.hero.ctaPrimary}
+              Solicitar Diagnóstico
             </button>
           </div>
         </div>
@@ -102,7 +116,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           onClick={onOpenContact}
           className="w-full py-4 px-6 text-center text-sm font-bold tracking-wide text-white bg-brand-orange active:bg-brand-orange/95 rounded-full shadow-2xl transition-all flex items-center justify-center gap-2"
         >
-          <span>Schedule Free Assessment</span>
+          <span>Solicitar Diagnóstico</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
