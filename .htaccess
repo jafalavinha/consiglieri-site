@@ -1,0 +1,36 @@
+DirectoryIndex index.html index.htm index.php
+
+Options -Indexes
+RewriteEngine On
+RewriteBase /
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Serve existing files and directories directly
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Clean URL fallbacks if trailing slash is omitted
+RewriteRule ^en$ /en/ [R=301,L]
+RewriteRule ^pt-br$ /pt-br/ [R=301,L]
+
+# Adaptive Language Routing on root / (Zero-Flash)
+# 1. Check explicit user preference cookie
+RewriteCond %{HTTP_COOKIE} consiglieri_lang=pt [NC]
+RewriteRule ^$ /pt-br/ [R=302,L]
+
+RewriteCond %{HTTP_COOKIE} consiglieri_lang=en [NC]
+RewriteRule ^$ /en/ [R=302,L]
+
+# 2. Check browser Accept-Language header
+RewriteCond %{HTTP:Accept-Language} (^|,\s*)pt [NC]
+RewriteRule ^$ /pt-br/ [R=302,L]
+
+RewriteCond %{HTTP:Accept-Language} (^|,\s*)en [NC]
+RewriteRule ^$ /en/ [R=302,L]
+
+# Fallback 404 error page
+ErrorDocument 404 /404.html
