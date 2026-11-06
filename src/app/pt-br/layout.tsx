@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Consiglieri Solutions | Engenharia Técnica e Engenharia Operacional",
-  description: "Laudos técnicos, NR-11, NR-12, NR-13, PMOC de climatização, projetos mecânicos, planos de manutenção e diagnóstico operacional para empresas e indústrias.",
+  title: "Consiglieri — Resolução sem complicação",
+  description:
+    "Transformamos cenários complexos em operações claras, organizadas e eficientes. Solicite seu diagnóstico operacional gratuito de 30 minutos.",
   alternates: {
     canonical: "https://consiglieri.solutions/pt-br/",
     languages: {
@@ -12,10 +13,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Consiglieri Solutions | Engenharia Técnica e Operacional",
-    description: "Engenharia Mecânica para transformar problemas técnicos e regulatórios em operações seguras, eficientes e padronizadas.",
+    title: "Consiglieri — Resolução sem complicação",
+    description:
+      "Transformamos cenários complexos em operações claras, organizadas e eficientes. Diagnóstico operacional gratuito de 30 minutos.",
     url: "https://consiglieri.solutions/pt-br/",
-    siteName: "Consiglieri Solutions",
+    siteName: "Consiglieri",
     locale: "pt_BR",
     type: "website",
   },

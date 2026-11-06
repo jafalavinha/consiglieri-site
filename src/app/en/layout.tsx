@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Consiglieri Solutions | Home Services Revenue Optimization",
-  description: "We help HVAC, roofing, plumbing, and electrical contractors transform more opportunities into revenue by eliminating operational leaks in dispatching, estimating, and call flows.",
+  title: "Consiglieri — Resolution without complication",
+  description:
+    "We untangle complex operations into clear, structured, and high-performance businesses. Request your free 30-minute operational assessment.",
   alternates: {
     canonical: "https://consiglieri.solutions/en/",
     languages: {
@@ -12,10 +13,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Consiglieri Solutions | Home Services Revenue Optimization",
-    description: "We help HVAC, roofing, plumbing, and electrical contractors transform more opportunities into revenue by eliminating operational leaks in dispatching, estimating, and call flows.",
+    title: "Consiglieri — Resolution without complication",
+    description:
+      "We untangle complex operations into clear, structured, and high-performance businesses. Free 30-minute operational assessment.",
     url: "https://consiglieri.solutions/en/",
-    siteName: "Consiglieri Solutions",
+    siteName: "Consiglieri",
     locale: "en_US",
     type: "website",
   },

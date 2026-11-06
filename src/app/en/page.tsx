@@ -1,5 +1,5 @@
-import { EnglishHomePage } from '@/components/EnglishHomePage';
+import { InstitutionalPage } from '@/components/InstitutionalPage';
 
 export default function EnglishPage() {
-  return <EnglishHomePage />;
+  return <InstitutionalPage lang="en" />;
 }

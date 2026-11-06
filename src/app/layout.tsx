@@ -22,13 +22,18 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Consiglieri Solutions | Home Services Revenue Optimization",
-  description: "We help HVAC, roofing, plumbing, and electrical contractors transform more opportunities into revenue by eliminating operational leaks in dispatching, estimating, and call flows.",
+  title: "Consiglieri — Resolução sem complicação",
+  description:
+    "Transformamos cenários complexos em operações claras, organizadas e eficientes. Solicite seu diagnóstico operacional gratuito de 30 minutos.",
+  icons: {
+    icon: "/symbol-node.svg",
+    shortcut: "/symbol-node.svg",
+  },
   alternates: {
     canonical: "https://consiglieri.solutions/",
     languages: {
-      "en": "https://consiglieri.solutions/en/",
       "pt-BR": "https://consiglieri.solutions/pt-br/",
+      "en": "https://consiglieri.solutions/en/",
       "x-default": "https://consiglieri.solutions/",
     },
   },
@@ -40,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable} scroll-smooth`}>
+    <html lang="pt-BR" className={`${inter.variable} ${outfit.variable} scroll-smooth`}>
       <head>
         {/* Synchronous pre-render script for zero-flash adaptive language detection on root / */}
         <script
@@ -51,21 +56,23 @@ export default function RootLayout({
                   var path = window.location.pathname;
                   if (path === '/' || path === '') {
                     var saved = localStorage.getItem('consiglieri_lang');
-                    if (saved === 'pt') {
-                      window.location.replace('/pt-br/');
+                    if (saved === 'en') {
+                      window.location.replace('/en/');
                       return;
                     }
-                    if (saved === 'en') {
+                    if (saved === 'pt') {
+                      window.location.replace('/pt-br/');
                       return;
                     }
                     var langs = navigator.languages || [navigator.language || ''];
                     for (var i = 0; i < langs.length; i++) {
                       var l = (langs[i] || '').toLowerCase();
-                      if (l.indexOf('pt') === 0) {
-                        window.location.replace('/pt-br/');
+                      if (l.indexOf('en') === 0) {
+                        window.location.replace('/en/');
                         return;
                       }
-                      if (l.indexOf('en') === 0) {
+                      if (l.indexOf('pt') === 0) {
+                        window.location.replace('/pt-br/');
                         return;
                       }
                     }
@@ -76,7 +83,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-brand-bg text-brand-text font-sans antialiased min-h-screen flex flex-col">
+      <body className="bg-[#F8F9FA] text-[#0E1726] font-sans antialiased min-h-screen flex flex-col">
         <LanguageProvider>
           {children}
         </LanguageProvider>
