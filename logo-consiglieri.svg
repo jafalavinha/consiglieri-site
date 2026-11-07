@@ -1,0 +1,10 @@
+<svg width="340" height="70" viewBox="0 0 340 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(6, 7)">
+    <line x1="28" y1="6" x2="28" y2="23" stroke="#0E1726" stroke-width="3" stroke-linecap="round"/>
+    <line x1="12" y1="38" x2="24" y2="30" stroke="#0E1726" stroke-width="3" stroke-linecap="round"/>
+    <line x1="44" y1="38" x2="32" y2="30" stroke="#0E1726" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="28" cy="28" r="4.5" fill="#D9531E"/>
+  </g>
+  <text x="68" y="36" fill="#0E1726" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" letter-spacing="4">CONSIGLIERI</text>
+  <text x="69" y="52" fill="#475569" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" letter-spacing="0.5">Resolução sem complicação.</text>
+</svg>
