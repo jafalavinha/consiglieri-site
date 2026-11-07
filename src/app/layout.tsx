@@ -83,7 +83,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-[#F8F9FA] text-[#0E1726] font-sans antialiased min-h-screen flex flex-col">
+      <body className="bg-[#070C18] text-[#F8FAFC] font-sans antialiased min-h-screen flex flex-col">
         <LanguageProvider>
           {children}
         </LanguageProvider>

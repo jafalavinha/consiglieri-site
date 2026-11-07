@@ -6,6 +6,7 @@ interface BrandLogoProps {
   className?: string;
   showTagline?: boolean;
   lang?: 'pt' | 'en';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
 }
 
 export const BrandSymbol: React.FC<{
@@ -14,13 +15,13 @@ export const BrandSymbol: React.FC<{
   lineColor?: string;
   className?: string;
 }> = ({
-  size = 40,
+  size = 44,
   dotColor = '#D9531E',
-  lineColor = '#0E1726',
+  lineColor = '#FFFFFF',
   className = '',
 }) => {
-  // Ultra-minimalist geometric convergence node:
-  // Central solid dot with three fine precision lines converging into it
+  // Geometric convergence node:
+  // Central solid dot with three fine precision lines converging directly into it
   // (Top at 90°, Bottom-Left at 210°, Bottom-Right at 330°)
   return (
     <svg
@@ -35,50 +36,51 @@ export const BrandSymbol: React.FC<{
       {/* Top vertical convergence line */}
       <line
         x1="50"
-        y1="14"
+        y1="12"
         x2="50"
-        y2="42"
+        y2="41"
         stroke={lineColor}
         strokeWidth="4"
         strokeLinecap="round"
       />
       {/* Bottom-left convergence line (210°) */}
       <line
-        x1="22"
-        y1="66"
-        x2="44"
-        y2="54"
+        x1="20"
+        y1="68"
+        x2="43"
+        y2="55"
         stroke={lineColor}
         strokeWidth="4"
         strokeLinecap="round"
       />
       {/* Bottom-right convergence line (330°) */}
       <line
-        x1="78"
-        y1="66"
-        x2="56"
-        y2="54"
+        x1="80"
+        y1="68"
+        x2="57"
+        y2="55"
         stroke={lineColor}
         strokeWidth="4"
         strokeLinecap="round"
       />
       {/* Central focal node dot */}
-      <circle cx="50" cy="50" r="7" fill={dotColor} />
+      <circle cx="50" cy="50" r="7.5" fill={dotColor} />
     </svg>
   );
 };
 
 export const BrandLogo: React.FC<BrandLogoProps> = ({
   variant = 'horizontal',
-  theme = 'light',
+  theme = 'dark',
   className = '',
   showTagline = true,
   lang = 'pt',
+  size = 'md',
 }) => {
-  const isDark = theme === 'dark';
-  const textColor = isDark ? '#FFFFFF' : '#0E1726';
-  const tagColor = isDark ? '#94A3B8' : '#475569';
-  const lineColor = isDark ? '#F8F9FA' : '#0E1726';
+  const isLight = theme === 'light';
+  const textColor = isLight ? '#0E1726' : '#FFFFFF';
+  const tagColor = isLight ? '#475569' : '#94A3B8';
+  const lineColor = isLight ? '#0E1726' : '#FFFFFF';
   const dotColor = '#D9531E'; // Official warm orange focal accent
 
   const taglineText =
@@ -87,9 +89,10 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
       : 'Resolução sem complicação.';
 
   if (variant === 'symbol') {
+    const symbolPx = size === 'sm' ? 32 : size === 'lg' ? 56 : size === 'xl' ? 80 : 44;
     return (
       <BrandSymbol
-        size={36}
+        size={symbolPx}
         dotColor={dotColor}
         lineColor={lineColor}
         className={className}
@@ -98,18 +101,19 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   }
 
   if (variant === 'vertical') {
+    const symbolPx = size === 'sm' ? 44 : size === 'lg' ? 72 : size === 'xl' ? 96 : 60;
     return (
       <div className={`flex flex-col items-center text-center ${className}`}>
-        <BrandSymbol size={56} dotColor={dotColor} lineColor={lineColor} />
+        <BrandSymbol size={symbolPx} dotColor={dotColor} lineColor={lineColor} />
         <span
-          className="mt-3 font-sans font-bold tracking-[0.22em] text-xl sm:text-2xl uppercase select-none"
+          className="mt-3 font-sans font-black tracking-[0.24em] text-xl sm:text-2xl lg:text-3xl uppercase select-none leading-none"
           style={{ color: textColor }}
         >
           CONSIGLIERI
         </span>
         {showTagline && (
           <span
-            className="mt-1 text-xs tracking-wide font-normal select-none"
+            className="mt-1.5 text-xs sm:text-sm tracking-wide font-normal select-none"
             style={{ color: tagColor }}
           >
             {taglineText}
@@ -119,25 +123,26 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
     );
   }
 
-  // Default: Horizontal lockup (ideal for headers)
+  // Default: Horizontal lockup (ideal for headers and footers)
+  const symbolPx = size === 'sm' ? 34 : size === 'lg' ? 48 : 42;
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
+    <div className={`flex items-center gap-3 sm:gap-3.5 ${className}`}>
       <BrandSymbol
-        size={38}
+        size={symbolPx}
         dotColor={dotColor}
         lineColor={lineColor}
         className="flex-shrink-0"
       />
       <div className="flex flex-col justify-center select-none">
         <span
-          className="font-sans font-extrabold tracking-[0.2em] text-base sm:text-lg leading-tight uppercase"
+          className="font-sans font-black tracking-[0.22em] text-base sm:text-lg lg:text-xl leading-none uppercase"
           style={{ color: textColor }}
         >
           CONSIGLIERI
         </span>
         {showTagline && (
           <span
-            className="text-[10px] sm:text-[11px] tracking-tight font-medium"
+            className="text-[10px] sm:text-[11px] tracking-normal font-medium mt-1"
             style={{ color: tagColor }}
           >
             {taglineText}

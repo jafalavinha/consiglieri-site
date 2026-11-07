@@ -41,16 +41,16 @@ export const DiagnosticModal: React.FC<DiagnosticModalProps> = ({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-[#0E1726]/60 backdrop-blur-xs transition-opacity"
+        className="absolute inset-0 bg-black/80 backdrop-blur-xs transition-opacity"
         onClick={onClose}
       />
 
       {/* Modal Dialog */}
-      <div className="relative z-10 w-full max-w-2xl max-h-[92vh] overflow-y-auto rounded-2xl bg-white border border-[#E2E8F0] p-6 sm:p-8 shadow-2xl text-[#0E1726] animate-fade-in">
+      <div className="relative z-10 w-full max-w-2xl max-h-[92vh] overflow-y-auto rounded-2xl bg-[#0E1626] border border-[#1E293B] p-6 sm:p-8 shadow-2xl text-[#F8FAFC] animate-fade-in">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 text-[#94A3B8] hover:text-[#0E1726] transition-colors p-1"
+          className="absolute top-5 right-5 text-[#64748B] hover:text-white transition-colors p-1"
           aria-label="Fechar"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -60,17 +60,17 @@ export const DiagnosticModal: React.FC<DiagnosticModalProps> = ({
 
         {/* Modal Header */}
         <div className="flex items-start gap-4 mb-6">
-          <BrandSymbol size={44} className="flex-shrink-0 mt-0.5" />
+          <BrandSymbol size={48} lineColor="#FFFFFF" dotColor="#D9531E" className="flex-shrink-0 mt-0.5" />
           <div>
             <span className="text-[11px] font-bold uppercase tracking-wider text-[#D9531E]">
               {t.diagnostics.tag}
             </span>
-            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#0E1726] mt-0.5">
+            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#F8FAFC] mt-0.5">
               {lang === 'en'
                 ? 'Request Your Free 30-Minute Assessment'
                 : 'Solicitar Diagnóstico Operacional Gratuito'}
             </h3>
-            <p className="text-xs sm:text-sm text-[#475569] mt-1">
+            <p className="text-xs sm:text-sm text-[#94A3B8] mt-1">
               {lang === 'en'
                 ? 'We evaluate your operations across 4 strategic dimensions and deliver the complete weighted assessment spreadsheet at no cost.'
                 : 'Avaliamos sua operação em 4 dimensões estratégicas e entregamos a planilha de diagnóstico preenchida sem custo algum.'}
@@ -83,9 +83,9 @@ export const DiagnosticModal: React.FC<DiagnosticModalProps> = ({
           {t.diagnostics.dimensions.map((dim, idx) => (
             <div
               key={idx}
-              className="rounded-lg border border-[#E2E8F0] bg-[#F8F9FA] p-2.5 text-center"
+              className="rounded-lg border border-[#1E293B] bg-[#070C18] p-2.5 text-center"
             >
-              <span className="block text-[11px] font-bold text-[#0E1726] leading-tight">
+              <span className="block text-[11px] font-bold text-[#F8FAFC] leading-tight">
                 {dim.name.split(' ')[0]}
               </span>
               <span className="block text-[9px] text-[#64748B] mt-0.5">
@@ -99,7 +99,7 @@ export const DiagnosticModal: React.FC<DiagnosticModalProps> = ({
         <form onSubmit={handleSubmit} className="space-y-3.5">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
             <div>
-              <label className="block text-[11px] uppercase tracking-wider font-semibold text-[#475569] mb-1">
+              <label className="block text-[11px] uppercase tracking-wider font-semibold text-[#94A3B8] mb-1">
                 {lang === 'en' ? 'Your Name *' : 'Seu Nome *'}
               </label>
               <input
@@ -108,11 +108,11 @@ export const DiagnosticModal: React.FC<DiagnosticModalProps> = ({
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder={lang === 'en' ? 'John Doe' : 'Carlos Silva'}
-                className="w-full rounded-md border border-[#CBD5E1] bg-[#F8F9FA] px-3 py-2 text-xs sm:text-sm text-[#0E1726] focus:border-[#0E1726] focus:bg-white focus:outline-none transition-colors"
+                className="w-full rounded-md border border-[#1E293B] bg-[#070C18] px-3 py-2 text-xs sm:text-sm text-[#F8FAFC] placeholder-[#64748B] focus:border-[#D9531E] focus:outline-none transition-colors"
               />
             </div>
             <div>
-              <label className="block text-[11px] uppercase tracking-wider font-semibold text-[#475569] mb-1">
+              <label className="block text-[11px] uppercase tracking-wider font-semibold text-[#94A3B8] mb-1">
                 {lang === 'en' ? 'Company Name *' : 'Nome da Empresa *'}
               </label>
               <input
@@ -121,14 +121,14 @@ export const DiagnosticModal: React.FC<DiagnosticModalProps> = ({
                 value={company}
                 onChange={(e) => setCompany(e.target.value)}
                 placeholder={lang === 'en' ? 'Company Inc.' : 'Minha Empresa Ltda.'}
-                className="w-full rounded-md border border-[#CBD5E1] bg-[#F8F9FA] px-3 py-2 text-xs sm:text-sm text-[#0E1726] focus:border-[#0E1726] focus:bg-white focus:outline-none transition-colors"
+                className="w-full rounded-md border border-[#1E293B] bg-[#070C18] px-3 py-2 text-xs sm:text-sm text-[#F8FAFC] placeholder-[#64748B] focus:border-[#D9531E] focus:outline-none transition-colors"
               />
             </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
             <div>
-              <label className="block text-[11px] uppercase tracking-wider font-semibold text-[#475569] mb-1">
+              <label className="block text-[11px] uppercase tracking-wider font-semibold text-[#94A3B8] mb-1">
                 {lang === 'en' ? 'Phone / WhatsApp' : 'Telefone / WhatsApp'}
               </label>
               <input
@@ -136,11 +136,11 @@ export const DiagnosticModal: React.FC<DiagnosticModalProps> = ({
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="(00) 00000-0000"
-                className="w-full rounded-md border border-[#CBD5E1] bg-[#F8F9FA] px-3 py-2 text-xs sm:text-sm text-[#0E1726] focus:border-[#0E1726] focus:bg-white focus:outline-none transition-colors"
+                className="w-full rounded-md border border-[#1E293B] bg-[#070C18] px-3 py-2 text-xs sm:text-sm text-[#F8FAFC] placeholder-[#64748B] focus:border-[#D9531E] focus:outline-none transition-colors"
               />
             </div>
             <div>
-              <label className="block text-[11px] uppercase tracking-wider font-semibold text-[#475569] mb-1">
+              <label className="block text-[11px] uppercase tracking-wider font-semibold text-[#94A3B8] mb-1">
                 {lang === 'en' ? 'Industry / Sector' : 'Segmento de Atuação'}
               </label>
               <input
@@ -148,13 +148,13 @@ export const DiagnosticModal: React.FC<DiagnosticModalProps> = ({
                 value={sector}
                 onChange={(e) => setSector(e.target.value)}
                 placeholder={lang === 'en' ? 'Services, Industry, Retail...' : 'Serviços, Indústria, Comércio...'}
-                className="w-full rounded-md border border-[#CBD5E1] bg-[#F8F9FA] px-3 py-2 text-xs sm:text-sm text-[#0E1726] focus:border-[#0E1726] focus:bg-white focus:outline-none transition-colors"
+                className="w-full rounded-md border border-[#1E293B] bg-[#070C18] px-3 py-2 text-xs sm:text-sm text-[#F8FAFC] placeholder-[#64748B] focus:border-[#D9531E] focus:outline-none transition-colors"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-[11px] uppercase tracking-wider font-semibold text-[#475569] mb-1">
+            <label className="block text-[11px] uppercase tracking-wider font-semibold text-[#94A3B8] mb-1">
               {lang === 'en'
                 ? 'Main Operational Challenge (Optional)'
                 : 'Principal Desafio Operacional (Opcional)'}
@@ -168,12 +168,12 @@ export const DiagnosticModal: React.FC<DiagnosticModalProps> = ({
                   ? 'Ex: Inefficient workflows, lost quotes, lack of clear metrics...'
                   : 'Ex: Gargalos de processo, orçamentos perdidos, falta de indicadores...'
               }
-              className="w-full rounded-md border border-[#CBD5E1] bg-[#F8F9FA] px-3 py-2 text-xs sm:text-sm text-[#0E1726] focus:border-[#0E1726] focus:bg-white focus:outline-none transition-colors resize-none"
+              className="w-full rounded-md border border-[#1E293B] bg-[#070C18] px-3 py-2 text-xs sm:text-sm text-[#F8FAFC] placeholder-[#64748B] focus:border-[#D9531E] focus:outline-none transition-colors resize-none"
             />
           </div>
 
           {/* Privacy Note */}
-          <div className="rounded-lg bg-[#F8F9FA] border border-[#E2E8F0] p-3 text-[11px] text-[#64748B] flex items-center gap-2">
+          <div className="rounded-lg bg-[#070C18] border border-[#1E293B] p-3 text-[11px] text-[#94A3B8] flex items-center gap-2">
             <span className="text-[#D9531E] font-bold">✓</span>
             <span>
               {lang === 'en'
@@ -186,7 +186,7 @@ export const DiagnosticModal: React.FC<DiagnosticModalProps> = ({
           <div className="pt-2">
             <button
               type="submit"
-              className="w-full py-3 px-4 text-center text-xs sm:text-sm font-bold tracking-wider text-white bg-[#0E1726] hover:bg-[#1E293B] active:bg-[#0E1726] rounded-lg shadow-sm transition-all uppercase"
+              className="w-full py-3 px-4 text-center text-xs sm:text-sm font-bold tracking-wider text-white bg-[#D9531E] hover:bg-[#B84014] active:bg-[#D9531E] rounded-lg shadow-lg shadow-[#D9531E]/20 transition-all uppercase"
             >
               {lang === 'en'
                 ? 'Send Assessment Request via Email'

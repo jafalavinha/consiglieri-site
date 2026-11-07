@@ -16,24 +16,24 @@ export const FooterInstitutional: React.FC<FooterInstitutionalProps> = ({
   const t = content[lang];
 
   return (
-    <footer className="bg-white border-t border-[#E2E8F0] pt-16 pb-12 text-[#0E1726]">
+    <footer className="bg-[#040814] border-t border-[#1E293B] pt-16 pb-12 text-[#94A3B8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-12 border-b border-[#E2E8F0]">
-          {/* Brand Info */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-12 border-b border-[#1E293B]">
+          {/* Brand Info with Prominent Dark Logo */}
           <div className="lg:col-span-5 space-y-4">
-            <BrandLogo variant="horizontal" lang={lang} />
-            <p className="text-xs sm:text-sm text-[#475569] max-w-sm leading-relaxed mt-2">
+            <BrandLogo variant="horizontal" theme="dark" lang={lang} size="lg" />
+            <p className="text-xs sm:text-sm text-[#94A3B8] max-w-sm leading-relaxed mt-2 font-normal">
               {lang === 'en'
                 ? 'Strategic operational advisory and workflow architecture. We transform complex friction into structured, simple, and high-performance operations.'
                 : 'Aconselhamento operacional e resolução estratégica. Transformamos cenários complexos em operações claras, organizadas e sustentáveis.'}
             </p>
             <div className="pt-2 text-xs text-[#64748B]">
-              <span className="font-semibold text-[#0E1726]">
+              <span className="font-semibold text-white">
                 {lang === 'en' ? 'Direct Contact:' : 'Contato Direto:'}{' '}
               </span>
               <a
                 href="mailto:contact@consiglieri.solutions"
-                className="text-[#D9531E] font-medium hover:underline"
+                className="text-[#D9531E] font-medium hover:underline ml-1"
               >
                 contact@consiglieri.solutions
               </a>
@@ -41,54 +41,54 @@ export const FooterInstitutional: React.FC<FooterInstitutionalProps> = ({
           </div>
 
           {/* Boundaries Notice (PRD Section 5.5) */}
-          <div className="lg:col-span-4 bg-[#F8F9FA] rounded-xl border border-[#E2E8F0] p-5">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0E1726] mb-2 flex items-center gap-2">
+          <div className="lg:col-span-4 bg-[#0E1626] rounded-xl border border-[#1E293B] p-5">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#F8FAFC] mb-2 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#D9531E]" />
               {t.footer.boundariesTitle}
             </h4>
-            <p className="text-xs text-[#475569] leading-relaxed">
+            <p className="text-xs text-[#94A3B8] leading-relaxed">
               {t.footer.boundariesText}
             </p>
           </div>
 
           {/* Quick Navigation & Languages */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0E1726]">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#F8FAFC]">
               {t.footer.linksTitle}
             </h4>
-            <ul className="space-y-1.5 text-xs text-[#475569]">
+            <ul className="space-y-1.5 text-xs text-[#94A3B8]">
               <li>
-                <a href="#servicos" className="hover:text-[#0E1726] transition-colors">
+                <a href="#servicos" className="hover:text-white transition-colors">
                   {t.nav.services}
                 </a>
               </li>
               <li>
-                <a href="#metodologia" className="hover:text-[#0E1726] transition-colors">
+                <a href="#metodologia" className="hover:text-white transition-colors">
                   {t.nav.methodology}
                 </a>
               </li>
               <li>
-                <a href="#diagnostico" className="hover:text-[#0E1726] transition-colors">
+                <a href="#diagnostico" className="hover:text-white transition-colors">
                   {t.nav.diagnostics}
                 </a>
               </li>
               <li>
-                <a href="#filosofia" className="hover:text-[#0E1726] transition-colors">
+                <a href="#filosofia" className="hover:text-white transition-colors">
                   {t.nav.about}
                 </a>
               </li>
               <li>
-                <a href="#valores" className="hover:text-[#0E1726] transition-colors">
+                <a href="#valores" className="hover:text-white transition-colors">
                   {t.nav.values}
                 </a>
               </li>
               <li>
-                <a href="#lideranca" className="hover:text-[#0E1726] transition-colors">
+                <a href="#lideranca" className="hover:text-white transition-colors">
                   {t.nav.leadership}
                 </a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-[#0E1726] transition-colors">
+                <a href="#faq" className="hover:text-white transition-colors">
                   {t.nav.faq}
                 </a>
               </li>
@@ -100,17 +100,17 @@ export const FooterInstitutional: React.FC<FooterInstitutionalProps> = ({
                 href="/pt-br/"
                 onClick={() => setLanguagePreference('pt')}
                 className={`font-semibold ${
-                  lang === 'pt' ? 'text-[#D9531E]' : 'text-[#475569] hover:text-[#0E1726]'
+                  lang === 'pt' ? 'text-[#D9531E]' : 'text-[#94A3B8] hover:text-white'
                 }`}
               >
                 Português
               </Link>
-              <span className="text-[#CBD5E1]">|</span>
+              <span className="text-[#334155]">|</span>
               <Link
                 href="/en/"
                 onClick={() => setLanguagePreference('en')}
                 className={`font-semibold ${
-                  lang === 'en' ? 'text-[#D9531E]' : 'text-[#475569] hover:text-[#0E1726]'
+                  lang === 'en' ? 'text-[#D9531E]' : 'text-[#94A3B8] hover:text-white'
                 }`}
               >
                 English
@@ -124,7 +124,7 @@ export const FooterInstitutional: React.FC<FooterInstitutionalProps> = ({
           <p>
             &copy; {new Date().getFullYear()} Consiglieri Solutions. {t.footer.rights} (Fundada em 2025)
           </p>
-          <p className="text-[11px] text-[#94A3B8]">
+          <p className="text-[11px] text-[#64748B]">
             {lang === 'en'
               ? 'All consultations governed under strict Non-Disclosure Agreements (NDA).'
               : 'Atendimento pautado sob rigoroso acordo de confidencialidade (NDA).'}
