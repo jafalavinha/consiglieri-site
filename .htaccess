@@ -16,6 +16,7 @@ RewriteRule ^ - [L]
 # Clean URL fallbacks if trailing slash is omitted
 RewriteRule ^en$ /en/ [R=301,L]
 RewriteRule ^pt-br$ /pt-br/ [R=301,L]
+RewriteRule ^pt-br/engenharia-mecanica$ /pt-br/engenharia-mecanica/ [R=301,L]
 
 # Adaptive Language Routing on root / (Zero-Flash)
 # 1. Check explicit user preference cookie
