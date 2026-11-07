@@ -161,27 +161,27 @@ export interface ContentSchema {
 export const content: Record<Language, ContentSchema> = {
   pt: {
     nav: {
-      services: 'O Que Fazemos',
-      methodology: 'Metodologia',
-      diagnostics: 'Diagnóstico 30min',
+      services: 'Engenharia Mecânica',
+      methodology: 'Como Trabalhamos',
+      diagnostics: 'Consultoria Operacional',
       differentials: 'Diferenciais',
-      about: 'Filosofia & Origem',
+      about: 'Sobre a Consiglieri',
       values: 'Valores',
       leadership: 'Liderança',
       faq: 'FAQ',
-      ctaButton: 'Diagnóstico Gratuito',
+      ctaButton: 'Solicitar Avaliação',
     },
     hero: {
-      badge: 'Resolução sem complicação',
-      headline: 'Transformamos cenários complexos em operações claras, organizadas e eficientes.',
+      badge: 'Engenharia Mecânica & Consultoria Operacional',
+      headline: 'Soluções técnicas e operacionais para problemas reais.',
       subheadline:
-        'Compreendemos a raiz do problema antes de indicar qualquer ferramenta. Uma abordagem diagnóstica e pragmática para empresas que precisam de resultados sem criar complexidade desnecessária.',
-      ctaPrimary: 'Solicitar Diagnóstico Gratuito (30 min)',
-      ctaSecondary: 'Conhecer Nossa Metodologia',
+        'Da engenharia mecânica à melhoria operacional, ajudamos empresas a identificar problemas, avaliar alternativas e encontrar soluções adequadas às suas necessidades.',
+      ctaPrimary: 'Serviços de Engenharia Mecânica',
+      ctaSecondary: 'Consultoria Operacional',
       trustPoints: [
-        'Diagnóstico operacional gratuito de 30 minutos',
-        'Entrega gratuita da planilha ponderada de avaliação',
-        'Soluções proporcionais à complexidade real do problema',
+        'Engenharia Mecânica com responsabilidade técnica (CREA-SP)',
+        'Consultoria operacional com diagnóstico gratuito de 30 minutos',
+        'Soluções práticas e proporcionais à realidade do seu negócio',
       ],
     },
     philosophy: {

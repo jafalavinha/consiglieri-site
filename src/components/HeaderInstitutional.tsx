@@ -58,49 +58,94 @@ export const HeaderInstitutional: React.FC<HeaderInstitutionalProps> = ({
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
-            <a
-              href="#servicos"
-              className="text-xs xl:text-sm font-medium text-[#94A3B8] hover:text-[#FFFFFF] transition-colors"
-            >
-              {t.nav.services}
-            </a>
-            <a
-              href="#metodologia"
-              className="text-xs xl:text-sm font-medium text-[#94A3B8] hover:text-[#FFFFFF] transition-colors"
-            >
-              {t.nav.methodology}
-            </a>
-            <a
-              href="#diagnostico"
-              className="text-xs xl:text-sm font-medium text-[#94A3B8] hover:text-[#FFFFFF] transition-colors"
-            >
-              {t.nav.diagnostics}
-            </a>
-            <a
-              href="#filosofia"
-              className="text-xs xl:text-sm font-medium text-[#94A3B8] hover:text-[#FFFFFF] transition-colors"
-            >
-              {t.nav.about}
-            </a>
-            <a
-              href="#valores"
-              className="text-xs xl:text-sm font-medium text-[#94A3B8] hover:text-[#FFFFFF] transition-colors"
-            >
-              {t.nav.values}
-            </a>
-            <a
-              href="#lideranca"
-              className="text-xs xl:text-sm font-medium text-[#94A3B8] hover:text-[#FFFFFF] transition-colors"
-            >
-              {t.nav.leadership}
-            </a>
-            <a
-              href="#faq"
-              className="text-xs xl:text-sm font-medium text-[#94A3B8] hover:text-[#FFFFFF] transition-colors"
-            >
-              {t.nav.faq}
-            </a>
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-7">
+            {lang === 'pt' ? (
+              <>
+                <Link
+                  href="/pt-br/"
+                  className="text-xs xl:text-sm font-medium text-[#94A3B8] hover:text-[#FFFFFF] transition-colors"
+                >
+                  Início
+                </Link>
+                {/* Option with prominent highlight for immediate discovery (PRD Section 4) */}
+                <Link
+                  href="/pt-br/engenharia-mecanica/"
+                  className="inline-flex items-center gap-1.5 text-xs xl:text-sm font-bold text-white bg-[#D9531E] hover:bg-[#B84014] px-3 py-1.5 rounded-md shadow-xs transition-all"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                  Engenharia Mecânica
+                </Link>
+                <a
+                  href="/pt-br/#consultoria-operacional"
+                  className="text-xs xl:text-sm font-medium text-[#94A3B8] hover:text-[#FFFFFF] transition-colors"
+                >
+                  Consultoria Operacional
+                </a>
+                <a
+                  href="/pt-br/#metodologia"
+                  className="text-xs xl:text-sm font-medium text-[#94A3B8] hover:text-[#FFFFFF] transition-colors"
+                >
+                  Como Trabalhamos
+                </a>
+                <a
+                  href="/pt-br/#filosofia"
+                  className="text-xs xl:text-sm font-medium text-[#94A3B8] hover:text-[#FFFFFF] transition-colors"
+                >
+                  Sobre a Consiglieri
+                </a>
+                <a
+                  href="/pt-br/#contato"
+                  className="text-xs xl:text-sm font-medium text-[#94A3B8] hover:text-[#FFFFFF] transition-colors"
+                >
+                  Contato
+                </a>
+              </>
+            ) : (
+              <>
+                <a
+                  href="#servicos"
+                  className="text-xs xl:text-sm font-medium text-[#94A3B8] hover:text-[#FFFFFF] transition-colors"
+                >
+                  {t.nav.services}
+                </a>
+                <a
+                  href="#metodologia"
+                  className="text-xs xl:text-sm font-medium text-[#94A3B8] hover:text-[#FFFFFF] transition-colors"
+                >
+                  {t.nav.methodology}
+                </a>
+                <a
+                  href="#diagnostico"
+                  className="text-xs xl:text-sm font-medium text-[#94A3B8] hover:text-[#FFFFFF] transition-colors"
+                >
+                  {t.nav.diagnostics}
+                </a>
+                <a
+                  href="#filosofia"
+                  className="text-xs xl:text-sm font-medium text-[#94A3B8] hover:text-[#FFFFFF] transition-colors"
+                >
+                  {t.nav.about}
+                </a>
+                <a
+                  href="#valores"
+                  className="text-xs xl:text-sm font-medium text-[#94A3B8] hover:text-[#FFFFFF] transition-colors"
+                >
+                  {t.nav.values}
+                </a>
+                <a
+                  href="#lideranca"
+                  className="text-xs xl:text-sm font-medium text-[#94A3B8] hover:text-[#FFFFFF] transition-colors"
+                >
+                  {t.nav.leadership}
+                </a>
+                <a
+                  href="#faq"
+                  className="text-xs xl:text-sm font-medium text-[#94A3B8] hover:text-[#FFFFFF] transition-colors"
+                >
+                  {t.nav.faq}
+                </a>
+              </>
+            )}
           </nav>
 
           {/* Header Actions: Language Switcher + Desktop CTA */}

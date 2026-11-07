@@ -57,41 +57,83 @@ export const FooterInstitutional: React.FC<FooterInstitutionalProps> = ({
               {t.footer.linksTitle}
             </h4>
             <ul className="space-y-1.5 text-xs text-[#94A3B8]">
-              <li>
-                <a href="#servicos" className="hover:text-white transition-colors">
-                  {t.nav.services}
-                </a>
-              </li>
-              <li>
-                <a href="#metodologia" className="hover:text-white transition-colors">
-                  {t.nav.methodology}
-                </a>
-              </li>
-              <li>
-                <a href="#diagnostico" className="hover:text-white transition-colors">
-                  {t.nav.diagnostics}
-                </a>
-              </li>
-              <li>
-                <a href="#filosofia" className="hover:text-white transition-colors">
-                  {t.nav.about}
-                </a>
-              </li>
-              <li>
-                <a href="#valores" className="hover:text-white transition-colors">
-                  {t.nav.values}
-                </a>
-              </li>
-              <li>
-                <a href="#lideranca" className="hover:text-white transition-colors">
-                  {t.nav.leadership}
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="hover:text-white transition-colors">
-                  {t.nav.faq}
-                </a>
-              </li>
+              {lang === 'pt' ? (
+                <>
+                  <li>
+                    <Link href="/pt-br/" className="hover:text-white transition-colors">
+                      Início
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/pt-br/engenharia-mecanica/" className="text-[#D9531E] hover:text-[#EA580C] font-semibold transition-colors">
+                      Engenharia Mecânica
+                    </Link>
+                  </li>
+                  <li>
+                    <a href="/pt-br/#consultoria-operacional" className="hover:text-white transition-colors">
+                      Consultoria Operacional
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/pt-br/#metodologia" className="hover:text-white transition-colors">
+                      Como Trabalhamos
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/pt-br/#filosofia" className="hover:text-white transition-colors">
+                      Sobre a Consiglieri
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/pt-br/#lideranca" className="hover:text-white transition-colors">
+                      Liderança & Governança
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/pt-br/#faq" className="hover:text-white transition-colors">
+                      Perguntas Frequentes
+                    </a>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    <a href="#servicos" className="hover:text-white transition-colors">
+                      {t.nav.services}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#metodologia" className="hover:text-white transition-colors">
+                      {t.nav.methodology}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#diagnostico" className="hover:text-white transition-colors">
+                      {t.nav.diagnostics}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#filosofia" className="hover:text-white transition-colors">
+                      {t.nav.about}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#valores" className="hover:text-white transition-colors">
+                      {t.nav.values}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#lideranca" className="hover:text-white transition-colors">
+                      {t.nav.leadership}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#faq" className="hover:text-white transition-colors">
+                      {t.nav.faq}
+                    </a>
+                  </li>
+                </>
+              )}
             </ul>
 
             <div className="pt-2 flex items-center gap-2 text-xs">

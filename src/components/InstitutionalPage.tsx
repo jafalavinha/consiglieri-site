@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { HeaderInstitutional } from './HeaderInstitutional';
 import { FooterInstitutional } from './FooterInstitutional';
 import { DiagnosticModal } from './DiagnosticModal';
@@ -68,18 +69,37 @@ export const InstitutionalPage: React.FC<InstitutionalPageProps> = ({ lang }) =>
 
                 {/* Hero CTAs */}
                 <div className="flex flex-col sm:flex-row gap-3.5 pt-2">
-                  <button
-                    onClick={() => setIsAssessmentOpen(true)}
-                    className="inline-flex items-center justify-center px-6 py-4 text-xs sm:text-sm font-bold tracking-wider text-white bg-[#D9531E] hover:bg-[#B84014] active:bg-[#D9531E] rounded-lg shadow-lg shadow-[#D9531E]/20 transition-all uppercase"
-                  >
-                    {t.hero.ctaPrimary}
-                  </button>
-                  <a
-                    href="#metodologia"
-                    className="inline-flex items-center justify-center px-6 py-4 text-xs sm:text-sm font-bold tracking-wider text-[#F8FAFC] hover:text-[#D9531E] bg-[#0E1626] hover:bg-[#141E33] border border-[#1E293B] rounded-lg shadow-xs transition-all uppercase"
-                  >
-                    {t.hero.ctaSecondary}
-                  </a>
+                  {lang === 'pt' ? (
+                    <>
+                      <Link
+                        href="/pt-br/engenharia-mecanica/"
+                        className="inline-flex items-center justify-center px-6 py-4 text-xs sm:text-sm font-bold tracking-wider text-white bg-[#D9531E] hover:bg-[#B84014] active:bg-[#D9531E] rounded-lg shadow-lg shadow-[#D9531E]/20 transition-all uppercase"
+                      >
+                        {t.hero.ctaPrimary}
+                      </Link>
+                      <a
+                        href="#consultoria-operacional"
+                        className="inline-flex items-center justify-center px-6 py-4 text-xs sm:text-sm font-bold tracking-wider text-[#F8FAFC] hover:text-[#D9531E] bg-[#0E1626] hover:bg-[#141E33] border border-[#1E293B] rounded-lg shadow-xs transition-all uppercase"
+                      >
+                        {t.hero.ctaSecondary}
+                      </a>
+                    </>
+                  ) : (
+                    <>
+                      <button
+                        onClick={() => setIsAssessmentOpen(true)}
+                        className="inline-flex items-center justify-center px-6 py-4 text-xs sm:text-sm font-bold tracking-wider text-white bg-[#D9531E] hover:bg-[#B84014] active:bg-[#D9531E] rounded-lg shadow-lg shadow-[#D9531E]/20 transition-all uppercase"
+                      >
+                        {t.hero.ctaPrimary}
+                      </button>
+                      <a
+                        href="#metodologia"
+                        className="inline-flex items-center justify-center px-6 py-4 text-xs sm:text-sm font-bold tracking-wider text-[#F8FAFC] hover:text-[#D9531E] bg-[#0E1626] hover:bg-[#141E33] border border-[#1E293B] rounded-lg shadow-xs transition-all uppercase"
+                      >
+                        {t.hero.ctaSecondary}
+                      </a>
+                    </>
+                  )}
                 </div>
 
                 {/* Hero Trust Points */}
@@ -161,9 +181,119 @@ export const InstitutionalPage: React.FC<InstitutionalPageProps> = ({ lang }) =>
         </section>
 
         {/* ========================================================================= */}
+        {/* PT-BR DUAL-PILLAR SHOWCASE (PRD v1.2 SECTION 5.2)                         */}
+        {/* ========================================================================= */}
+        {lang === 'pt' && (
+          <section className="py-14 bg-[#070C18] border-b border-[#1E293B]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center max-w-3xl mx-auto mb-10">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#D9531E]">
+                  Duas Frentes de Atuação
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-black text-[#F8FAFC] mt-1.5">
+                  Engenharia Mecânica & Consultoria Operacional
+                </h2>
+                <p className="text-sm text-[#94A3B8] mt-2">
+                  Atendemos empresas em dois pilares complementares com alto rigor técnico e foco prático de resolução.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                {/* Pilar 1: Engenharia Mecânica */}
+                <div className="rounded-2xl border border-[#D9531E]/40 bg-[#0E1626] p-7 sm:p-8 flex flex-col justify-between shadow-xl relative overflow-hidden group hover:border-[#D9531E] transition-all">
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#D9531E] bg-[#D9531E]/15 px-3 py-1 rounded-full">
+                        Serviços Técnicos • CREA-SP
+                      </span>
+                      <span className="text-xs text-[#64748B] font-mono">Frente 01</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-[#F8FAFC] mb-2 group-hover:text-[#D9531E] transition-colors">
+                      Engenharia Mecânica
+                    </h3>
+                    <p className="text-sm text-[#94A3B8] leading-relaxed mb-6">
+                      Inspeções, avaliações técnicas, projetos mecânicos, laudos, pareceres e responsabilidade técnica sob profissional habilitado registrado no CREA-SP com emissão de ART.
+                    </p>
+                    <ul className="space-y-2.5 text-xs text-[#94A3B8] mb-8">
+                      <li className="flex items-start gap-2">
+                        <span className="text-[#D9531E] font-bold mt-0.5">✓</span>
+                        <span>Máquinas e Equipamentos: Apreciação de riscos e laudos NR-12</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-[#D9531E] font-bold mt-0.5">✓</span>
+                        <span>Movimentação de Cargas: Pontes rolantes, balancins e planos de rigging</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-[#D9531E] font-bold mt-0.5">✓</span>
+                        <span>Sistemas Pressurizados: Tubulações, compressores e integridade (NR-13)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-[#D9531E] font-bold mt-0.5">✓</span>
+                        <span>Sistemas Térmicos: Elaboração e responsabilidade de PMOC e exaustão</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <Link
+                    href="/pt-br/engenharia-mecanica/"
+                    className="inline-flex items-center justify-center gap-2 w-full py-4 text-xs sm:text-sm font-bold tracking-wider text-white bg-[#D9531E] hover:bg-[#B84014] active:bg-[#D9531E] rounded-xl shadow-lg shadow-[#D9531E]/20 transition-all uppercase"
+                  >
+                    <span>Conheça nossos serviços de Engenharia Mecânica</span>
+                    <span>→</span>
+                  </Link>
+                </div>
+
+                {/* Pilar 2: Consultoria Operacional */}
+                <div className="rounded-2xl border border-[#1E293B] bg-[#0E1626] p-7 sm:p-8 flex flex-col justify-between shadow-xl relative overflow-hidden group hover:border-[#F8FAFC]/40 transition-all">
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-slate-300 bg-white/10 px-3 py-1 rounded-full">
+                        Diagnóstico & Gestão
+                      </span>
+                      <span className="text-xs text-[#64748B] font-mono">Frente 02</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-[#F8FAFC] mb-2 group-hover:text-white transition-colors">
+                      Consultoria Operacional
+                    </h3>
+                    <p className="text-sm text-[#94A3B8] leading-relaxed mb-6">
+                      Diagnóstico empresarial, auditoria de rotinas, melhoria de processos, eficiência operacional e apoio à implementação de soluções sustentáveis.
+                    </p>
+                    <ul className="space-y-2.5 text-xs text-[#94A3B8] mb-8">
+                      <li className="flex items-start gap-2">
+                        <span className="text-[#D9531E] font-bold mt-0.5">✓</span>
+                        <span>Revenue Leak Assessment: Estancamento de perdas de faturamento</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-[#D9531E] font-bold mt-0.5">✓</span>
+                        <span>Operational Review: Diagnóstico de rotinas, gargalos e retrabalhos</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-[#D9531E] font-bold mt-0.5">✓</span>
+                        <span>Action Plan: Roteiro tático de implementação e governança de longo prazo</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-[#D9531E] font-bold mt-0.5">✓</span>
+                        <span>Diagnóstico gratuito de 30 minutos com entrega de planilha ponderada</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <a
+                    href="#consultoria-operacional"
+                    className="inline-flex items-center justify-center gap-2 w-full py-4 text-xs sm:text-sm font-bold tracking-wider text-[#F8FAFC] hover:text-white bg-[#141E33] hover:bg-[#1E2E4A] active:bg-[#141E33] border border-[#1E293B] rounded-xl shadow-xs transition-all uppercase"
+                  >
+                    <span>Conheça nossa Consultoria Operacional</span>
+                    <span>↓</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ========================================================================= */}
         {/* SECTION 2: FILOSOFIA & METÁFORA (THE MIDFIELDER & CONSIGLIERE)            */}
         {/* ========================================================================= */}
         <section id="filosofia" className="py-20 sm:py-28 bg-[#070C18] border-y border-[#1E293B]">
+          <span id="sobre" className="sr-only" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <span className="text-xs font-bold uppercase tracking-widest text-[#D9531E]">
@@ -241,7 +371,8 @@ export const InstitutionalPage: React.FC<InstitutionalPageProps> = ({ lang }) =>
         {/* ========================================================================= */}
         {/* SECTION 3: OS 4 SERVIÇOS CENTRAIS                                         */}
         {/* ========================================================================= */}
-        <section id="servicos" className="py-20 sm:py-28 bg-[#070C18]">
+        <section id="consultoria-operacional" className="py-20 sm:py-28 bg-[#070C18]">
+          <span id="servicos" className="sr-only" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <span className="text-xs font-bold uppercase tracking-widest text-[#D9531E]">
@@ -672,7 +803,7 @@ export const InstitutionalPage: React.FC<InstitutionalPageProps> = ({ lang }) =>
         {/* ========================================================================= */}
         {/* SECTION 11: FINAL CTA BANNER                                              */}
         {/* ========================================================================= */}
-        <section className="py-20 sm:py-28 bg-[#070C18]">
+        <section id="contato" className="py-20 sm:py-28 bg-[#070C18]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="rounded-3xl border border-[#1E293B] bg-gradient-to-br from-[#0B132B] via-[#0E1626] to-[#070C18] text-white p-8 sm:p-14 text-center space-y-6 shadow-2xl relative overflow-hidden">
               <div className="absolute right-[-40px] top-[-40px] opacity-10 pointer-events-none">
