@@ -391,6 +391,7 @@ export const content: Record<Language, ContentSchema> = {
         {
           role: 'Chief of Technology and Marketing (CTMO)',
           name: 'Rodrigo Sena',
+          photo: '/team-rodrigo-sena.jpg',
           desc: 'Responsável pelas áreas de tecnologia, arquitetura digital, presença de marca e estratégias integradas de comunicação da Consiglieri.',
         },
       ],
@@ -709,6 +710,7 @@ export const content: Record<Language, ContentSchema> = {
         {
           role: 'Chief of Technology and Marketing (CTMO)',
           name: 'Rodrigo Sena',
+          photo: '/team-rodrigo-sena.jpg',
           desc: 'Leads digital technology architecture, applied data systems, brand strategy, and integrated communications across Consiglieri.',
         },
       ],
