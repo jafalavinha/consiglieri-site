@@ -1,4 +1,4 @@
-export type Language = 'pt' | 'en';
+﻿export type Language = 'pt' | 'en';
 
 export interface ContentSchema {
   nav: {
@@ -355,7 +355,7 @@ export const content: Record<Language, ContentSchema> = {
       mission: 'Transformar caos em simplicidade.',
       visionTitle: 'Nossa Visão',
       vision:
-        'Desenvolver pessoas e profissionais capazes de gerar tanto valor que outras organizações desejem tê-los dentro de suas próprias equipes. A associação que construímos na mente de um empresário é: “Quero ter alguém da Consiglieri aqui.”',
+        'Ser o parceiro natural para resolução sem complicação.',
       coreValuesTitle: 'Os Quatro Valores Centrais',
       list: [
         {
