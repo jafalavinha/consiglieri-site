@@ -726,13 +726,29 @@ export const InstitutionalPage: React.FC<InstitutionalPageProps> = ({ lang }) =>
                   className="bg-[#0E1626] rounded-2xl border border-[#1E293B] p-8 shadow-xs flex flex-col justify-between"
                 >
                   <div>
-                    <span className="text-xs font-bold text-[#D9531E] uppercase tracking-wider block mb-1">
+                    {/* Headshot */}
+                    <div className="mb-5 flex justify-center">
+                      {member.photo ? (
+                        <img
+                          src={member.photo}
+                          alt={`Foto de ${member.name}`}
+                          className="w-24 h-24 rounded-full object-cover object-top border-2 border-[#D9531E] shadow-lg"
+                        />
+                      ) : (
+                        <div className="w-24 h-24 rounded-full bg-[#141E33] border-2 border-[#1E293B] flex items-center justify-center">
+                          <span className="text-2xl font-bold text-[#94A3B8]">
+                            {member.name.split(' ').map((n: string) => n[0]).join('').slice(0, 2)}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                    <span className="text-xs font-bold text-[#D9531E] uppercase tracking-wider block mb-1 text-center">
                       {member.role}
                     </span>
-                    <h3 className="text-xl font-bold text-[#F8FAFC] mb-3">
+                    <h3 className="text-xl font-bold text-[#F8FAFC] mb-3 text-center">
                       {member.name}
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#94A3B8] leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#94A3B8] leading-relaxed text-center">
                       {member.desc}
                     </p>
                   </div>

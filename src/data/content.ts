@@ -121,6 +121,7 @@ export interface ContentSchema {
     members: {
       role: string;
       name: string;
+      photo?: string;
       desc: string;
     }[];
     confidentiality: {
@@ -383,7 +384,8 @@ export const content: Record<Language, ContentSchema> = {
       members: [
         {
           role: 'Chief Operating Officer (COO)',
-          name: 'COO',
+          name: 'José Augusto Falavinha',
+          photo: '/team-jose-falavinha.jpg',
           desc: 'Responsável pela condução da operação institucional e atendimento comercial inicial, incluindo o recebimento das solicitações de diagnóstico e a coordenação das reuniões estratégicas.',
         },
         {
@@ -700,7 +702,8 @@ export const content: Record<Language, ContentSchema> = {
       members: [
         {
           role: 'Chief Operating Officer (COO)',
-          name: 'COO',
+          name: 'José Augusto Falavinha',
+          photo: '/team-jose-falavinha.jpg',
           desc: 'Oversees operational execution and commercial intake, leading initial diagnostic evaluations and coordinating strategic roadmaps.',
         },
         {
